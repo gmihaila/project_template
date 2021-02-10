@@ -1,6 +1,0 @@
-# local package
--e .
-
-# external requirements
-flake8
-pylint
