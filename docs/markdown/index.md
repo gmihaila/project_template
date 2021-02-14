@@ -1,52 +1,64 @@
-# **About me :speech_balloon:**
+# Project Template
 
 
-![george_handsome](images/georgem.jpeg)
+My template for data science projects
 
-George is a PhD candidate at University of North Texas, in the Department of Computer Science. He received his Bachelors Degree in Electrical Engineering in his home-country, Romania, and he got his Masters Degree in Computer Science in the United States. 
+## Project Organization
 
-He worked three summers for State Farm as a Data Scientist (DS) and Machine Learning (ML) Engineer, and he has more than 4 years of experience in Natural Language Processing (NLP), Computer Vision (CV), Deep Learning (DL) and Reinforcement Learning (RL). 
-
-He is currently working towards his doctoral thesis in casual dialog generation with persona.
-
-**Competencies:** *data science, machine learning, deep learning, high performance computing, Tensorflow2.0, PyTorch, Python, R.*
-
--------------------------
-
-## **:briefcase: Current Position**
-
-### **Teaching Assistant**
-
-**Computer Science | University of North Texas**
-
-*August 2020 – Present*
-    
-### **Artificial Intelligence – Machine Learning Researcher**
-
-**University of North Texas (UNT) | Department of Computer Science**
-
-*Jan 2017 - Present*
-
--------------------------
-
-## **:books: Reading**
-
-[How Not to Be Wrong: The Power of Mathematical Thinking](https://www.amazon.com/dp/0143127535/ref=cm_sw_em_r_mt_dp_U_9UQ4EbJG0NDEX) by [Jordan Ellenberg](https://www.amazon.com/Jordan-Ellenberg/e/B001K8IUCG/ref=dp_byline_cont_book_1)
-
--------------------------
-
-## **Contact** 🎣
-
-🦊 GitHub: [gmihaila](https://github.com/gmihaila)
-
-🌐 Website: [gmihaila.github.io](https://gmihaila.github.io/)
-
-👔 LinkedIn: [mihailageorge](https://www.linkedin.com/in/mihailageorge/)
-
-📓 Medium: [@gmihaila](https://gmihaila.medium.com)
-
-📬 Email: [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
-
-👤 Schedule meeting: [calendly.com/georgemihaila](https://calendly.com/georgemihaila){:target="_blank"}
-
-<br>
+```
+    project_template/   <- Project name.
+    │
+    ├───data/               <- Keep all versions of data for this project.
+    │   ├── external/               <- Data from third party sources.
+    │   ├── interim/                <- Intermediate data that has been transformed.
+    │   ├── processed/              <- The final, canonical data sets for modeling.
+    │   └── raw/                    <- The original, immutable data dump.
+    │
+    ├───docker/             <- Dockerfiles used to run project in container. If project only had one Dockerfile it can
+    │                       moved inside the project without a `docker/` folder.
+    │
+    ├───docs/               <- A default Sphinx project; see sphinx-doc.org for details
+    ├───models/             <- Trained and serialized models, model predictions, or model summaries
+    ├───notebooks/          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                         the creator's initials, and a short `-` delimited description, e.g.
+    │                         `1.0-jqp-initial-data-exploration`.
+    │
+    ├───project_template/   <- Source code for use in this project. You can put it in `src` if you preffer.
+    │   │                   Has similar name to project name.
+    │   │
+    │   ├───data/           <- Scripts to deal with data.
+    │   │   │   __init__.py         <- Makes data code a Python module.
+    │   │   └   make_dataset.py     <- Process data
+    │   │
+    │   ├───features/       <- Process raw data into features for modeling.
+    │   │   │   __init__.py         <- Makes raw data into features code a Python module.
+    │   │   └   build_features.py   <- Script to process data to features.
+    │   │
+    │   ├───models/         <- Scripts for modeling: training and inference
+    │   │   │   __init__.py         <- Makes modeling code a Python module.
+    │   │   │   predict_model.py    <- Script for making model predicitons.
+    │   │   └   train_model.py      <- Script for training model.
+    │   │
+    │   ├───visualization/  <- Create exploratory and results oriented visualizations
+    │   │   │   __init__.py         <- Makes exploratory and results oriented visualizations code a Python module.
+    │   │   └   visualize.py        <- Script to create exploratory and results oriented visualizations. 
+    │   │   
+    │   │   __init__.py     <- Makes source code a Python module.
+    │   └   __main__.py     <- Make the module execute some functionality when run as the entry point of the program.
+    │                       Execute this script when running `python project_template`.
+    │  
+    ├───references          <- Data dictionaries, manuals, and all other explanatory materials.
+    ├───reports             <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └───figures/                <- Generated graphics and figures to be used in reporting
+    │
+    ├───tests               <- Keep all testing code.
+    │   └   __init__.py             <- Make testing code a Python module.
+    │
+    │   README.md           <- The top-level README for developers using this project.
+    │   LICENSE             <- Project license.
+    │   Makefile            <- Makefile with commands like `make data` or `make train`.
+    │   setup.cfg           <- Ini file that contains option defaults for setup.py commands.
+    │   setup.py            <- Makes project pip installable (pip install -e .) so source code can be imported.
+    └   requierements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+                            generated with `pip freeze > requirements.txt`
+```

@@ -1,4 +1,4 @@
-.PHONY: clean style quality test style
+.PHONY: clean style quality test style docs localdocs
 
 # Global variables
 PROJECT_NAME = project_template
@@ -17,7 +17,6 @@ style:
 	black $(CHECK_DIRS)
 	isort $(CHECK_DIRS)
 
-
 # Runs checks on all files
 quality:
 	black --check $(CHECK_DIRS)
@@ -32,4 +31,4 @@ test:
 
 # Check that docs can build
 docs:
-	cd docs && make html SPHINXOPTS="-W -j 4"
+	mkdocs gh-deploy --config-file docs/mkdocs.yml

@@ -1,9 +1,9 @@
-site_name: George Mihaila
-site_url: https://github.com/gmihaila/gmihaila.github.io
-repo_name: 'Machine Learning Things'
-repo_url: https://github.com/gmihaila/machine_learning_things
+site_name: Project Template
+site_url: https://gmihaila.github.io/project_template/
+repo_name: 'Data Science Project'
+repo_url: https://github.com/gmihaila/project_template
 edit_uri: tree/master/docs/src/markdown
-site_description: George's Website along with a Collection of Useful Snippets for Python Machine Learning
+site_description: Template for a full data science project. It contains everything you would normally / should use in a data science project.
 copyright: |
   Copyright &copy; 2015 - 2020 <a href="https://github.com/gmihaila"  target="_blank" rel="noopener">George Mihaila</a>
 
@@ -12,23 +12,6 @@ docs_dir: markdown
 nav:
     - About: index.md
 
-    - Activities: activities/activities.md
-
-    - Useful Code: useful/useful.md
-
-    - Tutorial Notebooks:
-
-        - Bert Inner Workings: tutorial_notebooks/bert_inner_workings.md
-
-        - PyTorchText BucketIterator: tutorial_notebooks/pytorchtext_bucketiterator.md
-
-        - Pretrain Transformers: tutorial_notebooks/pretrain_transformers_pytorch.md
-
-        - Finetune Transformers: tutorial_notebooks/finetune_transformers_pytorch.md
-
-        - GPT2 Finetune Classification: tutorial_notebooks/gpt2_finetune_classification.md
-
-    - Resume: resume/resume.md
 
 markdown_extensions:
     - markdown.extensions.toc:
@@ -101,9 +84,6 @@ markdown_extensions:
 
 theme:
     name: material
-    custom_dir: theme
-    icon:
-        logo: material/book-open-page-variant
     language: en
     features:
         - instant
@@ -118,16 +98,7 @@ extra:
     manifest: manifest.webmanifest
     social:
     - icon: fontawesome/brands/github
-      link: https://github.com/gmihaila
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/mihailageorge
-
-
-extra_css:
-    - assets/pymdownx-extras/extra.css
-
-extra_javascript:
-    - assets/pymdownx-extras/extra.js
+      link: https://github.com/gmihaila/project_template
 
 plugins:
     - search
