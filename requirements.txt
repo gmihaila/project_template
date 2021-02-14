@@ -2,5 +2,5 @@
 -e .
 
 # external requirements
-flake8
+numpy
 pylint

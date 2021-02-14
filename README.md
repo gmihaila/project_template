@@ -1,5 +1,8 @@
 # Project Template
 
+[![Documentation Status](https://readthedocs.org/projects/ds-template/badge/?version=latest)](https://ds-template.readthedocs.io/en/latest/?badge=latest)
+
+
 My template for data science projects
 
 ## Project Organization

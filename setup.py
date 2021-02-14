@@ -171,6 +171,8 @@ setup(
     extras_require={  # Optional
         'dev': ['numpy'],
         'tests': ['numpy'],
+        'docs': ["mkdocs", "mkdocs-material", ""],
+        'quality': ["black", "isort", "pylint"],
     },
 
     # If there are data files included in your packages that need to be
