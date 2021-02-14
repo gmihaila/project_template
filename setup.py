@@ -171,7 +171,7 @@ setup(
     extras_require={  # Optional
         'dev': ['numpy'],
         'tests': ['numpy'],
-        'docs': ["mkdocs", "mkdocs-material", ""],
+        'docs': ["mkdocs", "mkdocs-material"],
         'quality': ["black", "isort", "pylint"],
     },
 
