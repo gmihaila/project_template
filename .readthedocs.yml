@@ -21,6 +21,6 @@ python:
       extra_requirements:
         - docs
     - method: setuptools
-      path: project_template
+      path: .
 
 
