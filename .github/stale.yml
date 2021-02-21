@@ -4,15 +4,14 @@ daysUntilStale: 2
 daysUntilClose: 1
 # Issues with these labels will never be considered stale
 exemptLabels:
-  - pinned
-  - security
-  - Feature request
+  - In Progress
+  - Feature Request
 # Label to use when marking an issue as stale
 staleLabel: wontfix
-# Comment to post when marking an issue as stale. Set to `false` to disable
+# Comment to post when marking an issue as stale. Set to `false` (i.e. markComment: false) to disable
 markComment: >
   This issue has been automatically marked as stale because it has not had
   recent activity. It will be closed if no further activity occurs. Thank you
-  for your contributions.
-# Comment to post when closing a stale issue. Set to `false` to disable
+  for your contributions!
+# Comment to post when closing a stale issue. Set to `false` (i.e. closeComment: false) to disable
 closeComment: false
