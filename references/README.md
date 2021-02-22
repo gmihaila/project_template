@@ -11,3 +11,4 @@ Here are some of the references I used in creating this project:
 
 * [Google Style Docstring](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
 
+* [Agile: User Stories with Examples and Template](https://www.atlassian.com/agile/project-management/user-stories)

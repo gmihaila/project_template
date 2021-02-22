@@ -1,23 +1,40 @@
 ---
 name: "\U0001F680 Feature Request"
-about: "I have a suggestion (and may want to implement it \U0001F642)!"
-title: ''
-labels: 'i: enhancement, i: needs triage'
+about: "If you have a suggestion \U0001F642."
+title: 'I had a dream...'
+labels: enhancement 
 assignees: ''
 
 ---
 
 ## Feature Request
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I have an issue when [...]
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen. Add any considered drawbacks.
+<!-- A clear and concise description of the feature proposal.
+     Please provide a link to the paper code, etc. -->
+     
+As a *[developer]*, <!-- Who are we building this for? -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+I *[want to]*,  <!-- Here we’re describing their intent — not the features they use. 
+                    What is it they’re actually trying to achieve? 
+                    This statement should be implementation free — 
+                    if you’re describing any part of the UI and not what the user goal is you're missing the point. -->
 
-**Teachability, Documentation, Adoption, Migration Strategy**
-If you can, explain how users will be able to use this and possibly write out a version the docs.
-Maybe a screenshot or design?
+*[so that]*.    <!-- How does their immediate desire to do something this fit into their bigger picture? 
+                    What’s the overall benefit they’re trying to achieve? What is the big problem that needs solving? -->
+
+
+## Motivation
+
+<!-- Please outline the motivation for the proposal. Is your feature request
+     related to a problem? e.g., I'm always frustrated when [...]. If this is related
+     to another GitHub issue, please link here too. -->
+
+## Your contribution
+
+<!-- Is there any way that you could help, e.g. by submitting a PR?
+     Make sure to read the CONTRIBUTING.MD readme -->
+     
+     
+
+<!-- Thanks for contributing! -->

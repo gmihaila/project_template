@@ -1,44 +1,59 @@
 ---
 name: "\U0001F41B Bug Report"
 about: "If something isn't working as expected \U0001F914."
-title: '[BUG]'
-labels: 'i: bug, i: needs triage'
+title: 'What seems to be the problem?'
+labels: bug
 assignees: ''
 
 ---
 
-## Bug Report
+<!-- Before submitting a bug, please make sure the issue hasn't been already addressed 
+by searching through the past issues. -->
 
-**Current Behavior**
-A clear and concise description of the behavior.
+## Describe the bug
 
-**Input Code**
-- REPL or Repo link if applicable:
+<!-- A clear and concise description of the behavior. -->
 
-```js
-var your => (code) => here;
+
+
+## Steps/Code to Reproduce
+
+<!-- Please add a minimal example that we can reproduce the error by running the code. 
+Be as succinct as possible, do not depend on external data.
+In short, we are going to copy-paste your code and we expect to get the same result as you.
+Example:
+```python
+a = [1,2,3]
+
+print(a[2])
+```
+If the code is too long, feel free to put it in a public gist and link
+it in the issue: https://gist.github.com -->
+
+```python
+# Sample code to reproduce the problem
 ```
 
-**Expected behavior/code**
-A clear and concise description of what you expected to happen (or code).
 
-**Babel Configuration (.babelrc, package.json, cli command)**
+#### Expected Behavior
 
-```js
-{
-  "your": { "config": "here" }
-}
-```
+<!-- Example: No error is thrown. Provide a clear and concise description of what you expected to happen. -->
 
-**Environment**
-- Babel version(s): [e.g. v6.0.0, v7.0.0-beta.34]
-- Node/npm version: [e.g. Node 8/npm 5]
-- OS: [e.g. OSX 10.13.4, Windows 10]
-- Monorepo: [e.g. yes/no/Lerna]
-- How you are using Babel: [e.g. `cli`, `register`, `loader`]
 
-**Possible Solution**
-<!--- Only if you have suggestions on a fix for the bug -->
+#### Actual Behavior
 
-**Additional context/Screenshots**
-Add any other context about the problem here. If applicable, add screenshots to help explain.
+<!-- Example: Error is thrown. Provide a clear and concise description of the actual output or traceback. -->
+
+
+#### Environment Info
+<!-- You can run the command ` python --version` to get the version of Python. Provide OS used and other packages 
+versions used to reproduce this error -->
+
+
+
+<br>
+
+**Note:** Please read [this guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports) detailing 
+how to provide the necessary information for us to reproduce your bug.
+
+<!-- Thanks for contributing! -->

@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2018 George Mihaila.
+# Copyright 2020 George Mihaila.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

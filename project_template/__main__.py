@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2018 George Mihaila.
+# Copyright 2020 George Mihaila.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,9 +22,12 @@ from __version__ import __version__
 from utils.helper_functions import power_up
 
 
-def parse_args():
+def parse_args() -> argparse.ArgumentParser:
     """
     Parsing input script arguments.
+
+    Returns:
+        argparse.ArgumentParser: Parsed arguments.
     """
 
     parser = argparse.ArgumentParser(
@@ -64,9 +67,11 @@ def parse_args():
 
 def main():
     """
-    Thi si main function.
+    Main function.
     """
+    # Parse arguments.
     args = parse_args()
+
     power_up(2, 3)
 
     print(args)
