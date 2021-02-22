@@ -4,8 +4,9 @@ daysUntilStale: 2
 daysUntilClose: 1
 # Issues with these labels will never be considered stale
 exemptLabels:
-  - In Progress
-  - Feature Request
+  - enhancement
+  - bug
+  - invalid
 # Label to use when marking an issue as stale
 staleLabel: wontfix
 # Comment to post when marking an issue as stale. Set to `false` (i.e. markComment: false) to disable
