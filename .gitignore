@@ -90,3 +90,5 @@ target/
 # Mypy cache
 .mypy_cache/
 
+# Exclude any virtual environment.
+venv/
