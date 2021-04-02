@@ -15,3 +15,41 @@
 """
 Code for data manipulation.
 """
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+
+def main():
+
+    # Read data.
+    dataset = pd.read_csv("data/iris.csv")
+
+    # Split train-dev-test
+    iris_features = dataset[
+        ["Id", "SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"]
+    ]
+    iris_species = dataset["Species"]
+
+    data_train, data_test, labels_train, labels_test = train_test_split(
+        iris_features, iris_species, train_size=0.8, random_state=123
+    )
+
+    data_train, data_validation, labels_train, labels_validation = train_test_split(
+        data_train, labels_train, train_size=0.8, random_state=123
+    )
+
+    # Save data splits
+    pd.concat([data_train, labels_train], axis=1).to_csv(
+        "data/iris_train.csv", index=False
+    )
+    pd.concat([data_validation, labels_validation], axis=1).to_csv(
+        "data/iris_validation.csv", index=False
+    )
+    pd.concat([data_test, labels_test], axis=1).to_csv(
+        "data/iris_test.csv", index=False
+    )
+
+
+if __name__ == "__main__":
+    main()

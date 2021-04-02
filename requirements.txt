@@ -3,3 +3,6 @@
 
 # external requirements
 numpy
+pandas_datareader
+matplotlib
+

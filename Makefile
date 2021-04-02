@@ -1,34 +1,54 @@
-.PHONY: clean style quality test style docs localdocs
+# Makefile for current library.
 
-# Global variables
+# Global variables.
 PROJECT_NAME = project_template
 PYTHON_INTERPRETER = python3
-CHECK_DIRS := tests project_template
+CHECK_DIRS := tests project_template *.py
 
+.PHONY: clean-build
+clean-build: ## Remove build artifacts.
+	@echo "+ $@"
+	@rm -fr build/
+	@rm -fr dist/
+	@rm -fr *.egg-info
 
-# Delete all compiled Python files
-clean:
-	find . -type f -name "*.py[co]" -delete
-	find . -type d -name "__pycache__" -delete
+.PHONY: clean-pyc
+clean-pyc: ## Remove Python file artifacts.
+	@echo "+ $@"
+	@find . -type d -name '__pycache__' -exec rm -rf {} +
+	@find . -type f -name '*.py[co]' -exec rm -f {} +
+	@find . -name '*~' -exec rm -f {} +
 
-
-# Format source code automatically and check is there are any problems left that need manual fixing
-style:
+.PHONY: style
+style: ## Format source code automatically and check is there are any problems left that need manual fixing.
 	black $(CHECK_DIRS)
 	isort $(CHECK_DIRS)
 
-# Runs checks on all files
-quality:
+.PHONY: quality
+quality: ## Runs checks on all files.
+	@echo "Make sure to run 'style' before to fix any code indentation issues!"
 	black --check $(CHECK_DIRS)
 	isort --check-only $(CHECK_DIRS)
 	pylint $(CHECK_DIRS)
 
-
-# Run tests for the library
-test:
+.PHONY: test
+test: ## Run tests for the library.
 	$(PYTHON_INTERPRETER) -m unittest
 
+.PHONY: docs
+docs: ## Rebuild docs automatically and display locally.
+	mkdocs serve  --config-file docs/mkdocs.yml
 
-# Check that docs can build
-docs:
-	mkdocs gh-deploy --config-file docs/mkdocs.yml
+.PHONY: servedocs
+servedocs: ## Rebuild docs automatically and push to github.
+	mkdocs build --config-file docs/mkdocs.yml
+	cp -rf docs/site/* .
+	rm -rf docs/site
+	git add --all
+	git commit -m "Updates to Website"
+	git push origin master
+	@echo "Website updated! Check it out: https://gmihaila.github.io "
+
+.PHONY: help
+help: ## Display make help.
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
