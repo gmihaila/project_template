@@ -41,13 +41,7 @@ docs: ## Rebuild docs automatically and display locally.
 
 .PHONY: servedocs
 servedocs: ## Rebuild docs automatically and push to github.
-	mkdocs build --config-file docs/mkdocs.yml
-	cp -rf docs/site/* .
-	rm -rf docs/site
-	git add --all
-	git commit -m "Updates to Website"
-	git push origin master
-	@echo "Website updated! Check it out: https://gmihaila.github.io "
+	mkdocs gh-deploy  --config-file docs/mkdocs.yml
 
 .PHONY: help
 help: ## Display make help.
