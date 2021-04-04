@@ -41,7 +41,7 @@ docs: ## Rebuild docs automatically and display locally.
 
 .PHONY: servedocs
 servedocs: ## Rebuild docs automatically and push to github.
-	mkdocs gh-deploy  --config-file docs/mkdocs.yml
+	mkdocs gh-deploy  --config-file docs/mkdocs.yml --force
 
 .PHONY: help
 help: ## Display make help.

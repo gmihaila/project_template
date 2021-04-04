@@ -1,0 +1,18 @@
+name: Build documentation
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'docs/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --config-file docs/mkdocs.yml --force
