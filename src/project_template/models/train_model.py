@@ -15,3 +15,23 @@
 """
 Code to train model.
 """
+
+import pandas as pd
+
+from sklearn.linear_model import LinearRegression
+
+
+TRAIN_DATA_PATH = 'data/processed/train_AAPL_1990-01-01-2017-12-31.csv'
+VALIDATION_DATA_PATH = 'data/processed/validation_AAPL_2018-01-01_2018-12-31.csv'
+
+
+def main():
+    # Read train data.
+    train_stocks_df = pd.read_csv(filepath_or_buffer=TRAIN_DATA_PATH)
+    # Read validation data.
+    validation_stocks_df = pd.read_csv(filepath_or_buffer=VALIDATION_DATA_PATH)
+
+
+
+if __name__ == '__main__':
+    main()

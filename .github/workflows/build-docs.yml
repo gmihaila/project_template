@@ -1,3 +1,4 @@
+# This action will build and deploy documentation everytime new content is added in docs/
 name: Build documentation
 on:
   push:
